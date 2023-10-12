@@ -1,0 +1,11 @@
+#~/.anacron/anacrontab
+#------------------------------------------------------
+
+SHELL=/usr/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/home/user/bin
+HOME=/home/siddalp
+LOGNAME=siddalp
+
+# period  delay  job-id  command
+## a great joke, that run-parts, doesn't by default run things ending .sh !
+1  5   siddalp.cron.daily    nice run-parts --regex=sh$ /home/siddalp/.anacron/daily
